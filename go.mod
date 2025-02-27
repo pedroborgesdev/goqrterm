@@ -1,4 +1,4 @@
-module github/pedroborgesdev/goqrterm
+module github.com/pedroborgesdev/goqrterm
 
 go 1.24.0
 
