@@ -24,7 +24,7 @@ func Print(text string) {
 	height := grid.Height()
 	width := grid.Width()
 
-	fmt.Println("\n▌ goqrterm is working now!")
+	fmt.Println("\n▌ GoQRTerm is working now!")
 	fmt.Println("▌ Follow GitHub Project: https://github.com/pedroborgesdev/goqrterm.git")
 	fmt.Println("▌ Created by pedroborgesdev\n ")
 
