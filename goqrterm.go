@@ -1,13 +1,20 @@
-package goqrterm
+package main
 
 import (
 	"fmt"
-	"io"
+	"os"
 
 	"github.com/qpliu/qrencode-go/qrencode"
 )
 
-func PrintCompactQR(w io.Writer, grid *qrencode.BitGrid) {
+func PrintCompactQR(text string) {
+	w := os.Stdout
+
+	grid, err := qrencode.Encode(text, qrencode.ECLevelQ)
+	if err != nil {
+		panic(err)
+	}
+
 	black := "█"
 	white := " "
 	borderLeft := "█ "
@@ -17,8 +24,8 @@ func PrintCompactQR(w io.Writer, grid *qrencode.BitGrid) {
 	height := grid.Height()
 	width := grid.Width()
 
-	fmt.Println("\n▌ GoQrShow is working now!")
-	fmt.Println("▌ Follow GitHub Project: https://github.com/pedroborgesdev/GoQrShow.git")
+	fmt.Println("\n▌ goqrterm is working now!")
+	fmt.Println("▌ Follow GitHub Project: https://github.com/pedroborgesdev/goqrterm.git")
 	fmt.Println("▌ Created by pedroborgesdev\n ")
 
 	fmt.Fprint(w, black)
