@@ -1,4 +1,4 @@
-package goqrterm
+package main
 
 import (
 	"fmt"
