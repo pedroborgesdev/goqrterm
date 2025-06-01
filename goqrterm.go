@@ -1,4 +1,4 @@
-package main
+package goqrterm
 
 import (
 	"fmt"
@@ -7,7 +7,7 @@ import (
 	"github.com/qpliu/qrencode-go/qrencode"
 )
 
-func PrintCompactQR(text string) {
+func Print(text string) {
 	w := os.Stdout
 
 	grid, err := qrencode.Encode(text, qrencode.ECLevelQ)
