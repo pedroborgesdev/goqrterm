@@ -35,7 +35,7 @@ func main() {
 When executed, your terminal will display the following QR code:
 
 <p align="center">
-  <img src="./assets/example.png" alt="QR Code Example" width="300">
+  <img src="./assets/example.png" alt="QR Code Example" width="800">
 </p>
 
 ---
@@ -45,7 +45,7 @@ When executed, your terminal will display the following QR code:
 You can easily scan the displayed QR code with your smartphone to view the content:
 
 <p align="center">
-  <img src="./assets/camera.jpg" alt="Scanning QR Code" width="300">
+  <img src="./assets/camera.jpg" alt="Scanning QR Code" width="800">
 </p>
 
 ---
