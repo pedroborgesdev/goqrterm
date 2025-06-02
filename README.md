@@ -9,7 +9,7 @@
 Import the module into your Go project:
 
 ```go
-package main
+package goqrterm
 
 import (
 	"github.com/pedroborgesdev/goqrterm/qr"
