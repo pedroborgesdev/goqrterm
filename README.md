@@ -12,19 +12,47 @@ Import the module into your Go project:
 package main
 
 import (
-	"github.com/pedroborgesdev/goqrterm"
+	"github.com/pedroborgesdev/goqrterm/qr"
 )
-```
+````
 
 ---
 
 ## 🚀 Usage
 
-Simply call the `Print` function with the content you want to encode:
+Simply call the Print function with the content you want to encode:
 
 ```go
 func main() {
 	goqrterm.Print("this is a simple test!")
+}
+```
+
+### New features added:
+
+* `goqrterm.Image("file_path")`
+
+  Generates a QR code from the given string and saves the image as `./assets/qrcode.png`.
+
+* `goqrterm.Decode("image_path")`
+
+  Decodes the QR code from the given image path and returns a string with the decoded content.
+
+Example:
+
+```go
+func main() {
+	err := goqrterm.Image("Hello from GoQRTerm!")
+	if err != nil {
+		panic(err)
+	}
+	println("QR code image saved to ./assets/qrcode.png")
+
+	decoded, err := goqrterm.Decode("./assets/qrcode.png")
+	if err != nil {
+		panic(err)
+	}
+	println("Decoded from QR Code:", decoded)
 }
 ```
 
@@ -55,9 +83,11 @@ You can easily scan the displayed QR code with your smartphone to view the conte
 ✅ Simple to use
 ✅ Pure Go
 ✅ Terminal-friendly QR code display
+✅ Generate QR code images (`Image`)
+✅ Decode QR codes from images (`Decode`)
 
 ---
 
 ## 📝 License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the MIT License. See LICENSE for more information.
