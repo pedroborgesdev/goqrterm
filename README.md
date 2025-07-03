@@ -5,6 +5,10 @@
 ---
 
 ## 📦 Installation
+Get the module:
+```bash
+$ go get github.com/pedroborgesdev/goqrterm
+```
 
 Import the module into your Go project:
 
@@ -14,7 +18,7 @@ package goqrterm
 import (
 	"github.com/pedroborgesdev/goqrterm/qr"
 )
-````
+```
 
 ---
 
